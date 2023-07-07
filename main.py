@@ -64,7 +64,6 @@ def clicked(x,y):
     y2 = randint(-300, 300)
     turtle_instance.penup()
     turtle_instance.goto(x2, y2)
-    turtle_instance.pendown()
     turtle_instance.showturtle()
 
 My_screen.listen()
