@@ -46,7 +46,11 @@ def update_score():
     turtle_instance3.clear()
     turtle_instance3.write(f"Score: {score}", align="center", font={"Arial", 32, "normal"})
 
+game_over = False
 def clicked(x,y):
+
+    if game_over:
+        return
 
     target_x, target_y = turtle_instance.position()
     if abs(target_x - x) < 20 and abs(target_y - y) < 20:
@@ -79,12 +83,14 @@ while True:
 
 
     if num <= 0:
+        game_over = True
+
         turtle_instance4.clear()
         turtle_instance2.clear()
         turtle_instance2.sety(320)
         turtle_instance2.setx(-90)
         turtle_instance2.write("Time Over", font=("Arial", 30))
-        time.sleep(5)
+        time.sleep(59)
         turtle_instance2.clear()
         break
     print(num)
