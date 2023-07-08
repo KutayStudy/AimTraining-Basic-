@@ -75,7 +75,7 @@ while True:
     turtle_instance2.write(str(num), font=("Arial", 50))
     turtle_instance4.sety(370)
     turtle_instance4.setx(-50)
-    turtle_instance4.write("Time Left:", font=("Arial", 15))
+    turtle_instance4.write("Time Left", font=("Arial", 15))
     num -= 1
     time.sleep(1)
     turtle_instance2.clear()
